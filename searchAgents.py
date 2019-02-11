@@ -306,15 +306,11 @@ class CornersProblem(search.SearchProblem):
         "Returns whether this search state is a goal state of the problem"
         "*** YOUR CODE HERE ***"
 
-        visitedCorners = state[1]
-
         # Return true if all corners are visited
-        for corner in visitedCorners:
-            # If any corner is false return false
-            if (corner == False):
-                return False
+        if (all(state[1])):
+            return True
 
-        return True
+        return False
 
         util.raiseNotDefined()
 
